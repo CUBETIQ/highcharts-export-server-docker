@@ -2,7 +2,7 @@ from node:14.16.0
 LABEL maintainer="sombochea@cubetiqs.com"
 
 ENV ACCEPT_HIGHCHARTS_LICENSE="YES"
-RUN sudo npm install highcharts-export-server -g 
+RUN npm install highcharts-export-server -g 
 
 WORKDIR /usr/share/fonts/truetype
 ADD fonts/OpenSans-Regular.ttf OpenSans-Regular.ttf
