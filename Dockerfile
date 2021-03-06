@@ -1,4 +1,4 @@
-from node:14.16.0
+from node:14.16.0-alpine3.13
 LABEL maintainer="sombochea@cubetiqs.com"
 
 ENV ACCEPT_HIGHCHARTS_LICENSE="YES"
