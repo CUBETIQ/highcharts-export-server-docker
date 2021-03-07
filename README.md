@@ -13,6 +13,34 @@ The application will run at port 8080 with exposed host port (the left one).
 
 ### Testing
 Try to test export charts data with export server that we running above.
+Example request body (json)
+```json
+{
+    "infile": {
+        "title": { 
+            "text": "Income"
+        },
+        "xAxis": {
+            "categories": [
+                "01-03-2021",
+                "02-03-2021",
+                "03-03-2021"
+            ]
+        },
+        "series": [
+            {
+                "data": [
+                    100.00,
+                    250.50,
+                    500.00
+                ]
+            }
+        ]
+    }
+}
+```
+
+Try example demo server
 ```shell
 curl -H "Content-Type: application/json" -X POST -d '{"infile":{"title": {"text": "Income"}, "xAxis": {"categories": ["01-03-2021", "02-03-2021", "03-03-2021"]}, "series": [{"data": [100.00,250.50,500.00]}]}}' http://charts-exporter.osa.cubetiqs.com -o exported.png
 ```
