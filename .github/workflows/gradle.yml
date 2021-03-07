@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Publish Docker Image
+    runs-on: ubuntu-latest
+    env:
+      REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: Sign-in to Private Registry "${REGISTRY}"
+        run: docker login $REGISTRY -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Building Docker Image
+        run: /bin/bash scripts/build.sh
