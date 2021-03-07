@@ -16,8 +16,8 @@ ADD fonts/OpenSans-BoldItalic.ttf OpenSans-BoldItalic.ttf
 ADD fonts/OpenSans-SemiboldItalic.ttf OpenSans-SemiboldItalic.ttf
 ADD fonts/OpenSans-ExtraBoldItalic.ttf OpenSans-ExtraBoldItalic.ttf
 
-ADD fonts/Kh-Bokor.ttf Kh-Bokor.ttf
 ADD fonts/Kh-Content.ttf Kh-Content.ttf
+ADD fonts/Kh-Siemreap.ttf Kh-Siemreap.ttf
 
 WORKDIR /
 
