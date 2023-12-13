@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM --platform=linux/arm64 node:alpine
 LABEL maintainer="sombochea@cubetiqs.com"
 
 ENV ACCEPT_HIGHCHARTS_LICENSE="YES"
