@@ -16,4 +16,4 @@ jobs:
       - name: Sign-in to Private Registry "${REGISTRY}"
         run: docker login $REGISTRY -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Building Docker Image
-        run: /bin/bash scripts/build.sh scripts/build-arm.sh
+        run: /bin/bash scripts/build.sh && /bin/bash scripts/build-arm.sh
