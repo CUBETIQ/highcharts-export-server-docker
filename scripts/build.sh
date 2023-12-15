@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TAG=latest
-REGISTRY=registry.kh.cubetiqs.com
+REGISTRY=registry1.ctdn.net/cubetiq
 IMAGE=highcharts-export-server
 CONTAINER=${REGISTRY}/${IMAGE}:${TAG}
 

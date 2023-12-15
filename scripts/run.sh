@@ -7,4 +7,4 @@ echo "Run the container..."
 docker run --name highcharts-export-server \
     -p 8080:8080 \
     --restart always \
-    -d registry.kh.cubetiqs.com/highcharts-export-server
+    -d registry1.ctdn.net/cubetiq/highcharts-export-server

@@ -3,7 +3,7 @@ name: Docker CI Private
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -12,8 +12,9 @@ jobs:
     env:
       REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
     steps:
+      - uses: docker/setup-buildx-action@v1
       - uses: actions/checkout@v1
       - name: Sign-in to Private Registry "${REGISTRY}"
         run: docker login $REGISTRY -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Building Docker Image
-        run: /bin/bash scripts/build.sh
+        run: /bin/bash scripts/build.sh && /bin/bash scripts/build-arm.sh
